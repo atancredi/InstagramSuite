@@ -13,14 +13,17 @@ def Convert(a):
 
 L = instaloader.Instaloader()
 
-user = "asciughino_"
+user = "grandefumoo"
+
+#get pwd
+password = json.loads(open("../credentials.json","r").read())[user]
 
 # Login or load session
 L.login(user, password)
 print("login eseguito\n")
 
 # Obtain profile metadata
-profile = instaloader.Profile.from_username(L.context, user)
+profile = instaloader.Profile.from_username(L.context, "asciughino_")
 
 dataStructure = []
 totalPosts = []
